@@ -1,0 +1,51 @@
+Analyzing stitch_rentwise_pro...                                
+
+warning • Unused import: '../models/billing_constants.dart' • rentwise_pro/lib/core/services/billing_service.dart:1:8 • unused_import
+warning • The value of the local variable 'boolType' isn't used • rentwise_pro/lib/core/storage/database_service.dart:30:11 • unused_local_variable
+   info • 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre • rentwise_pro/lib/core/theme/app_theme.dart:18:9 • deprecated_member_use
+   info • 'onBackground' is deprecated and shouldn't be used. Use onSurface instead. This feature was deprecated after v3.18.0-0.1.pre • rentwise_pro/lib/core/theme/app_theme.dart:19:9 • deprecated_member_use
+   info • 'surfaceVariant' is deprecated and shouldn't be used. Use surfaceContainerHighest instead. This feature was deprecated after v3.18.0-0.1.pre • rentwise_pro/lib/core/theme/app_theme.dart:22:9 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/core/theme/app_theme.dart:72:88 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/analytics/presentation/widgets/collection_chart.dart:51:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/auth/presentation/screens/login_screen.dart:69:44 • deprecated_member_use
+warning • Unused import: 'package:go_router/go_router.dart' • rentwise_pro/lib/features/bills/presentation/screens/billing_invoices_screen.dart:3:8 • unused_import
+  error • Invalid constant value • rentwise_pro/lib/features/bills/presentation/screens/billing_invoices_screen.dart:39:22 • invalid_constant
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/bills/presentation/screens/billing_invoices_screen.dart:49:46 • deprecated_member_use
+  error • Invalid constant value • rentwise_pro/lib/features/bills/presentation/screens/billing_invoices_screen.dart:57:90 • invalid_constant
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/bills/presentation/screens/billing_invoices_screen.dart:71:48 • deprecated_member_use
+  error • Invalid constant value • rentwise_pro/lib/features/bills/presentation/screens/billing_invoices_screen.dart:79:76 • invalid_constant
+  error • Invalid constant value • rentwise_pro/lib/features/bills/presentation/screens/billing_invoices_screen.dart:101:73 • invalid_constant
+  error • Invalid constant value • rentwise_pro/lib/features/bills/presentation/screens/billing_invoices_screen.dart:123:71 • invalid_constant
+warning • Unused import: 'package:uuid/uuid.dart' • rentwise_pro/lib/features/bills/presentation/screens/generate_bill_screen.dart:4:8 • unused_import
+warning • Unused import: '../../domain/entities/bill.dart' • rentwise_pro/lib/features/bills/presentation/screens/generate_bill_screen.dart:10:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/bills/presentation/screens/generate_bill_screen.dart:98:36 • deprecated_member_use
+   info • The import of 'package:flutter_riverpod/flutter_riverpod.dart' is unnecessary because all of the used elements are also provided by the import of 'package:riverpod_annotation/riverpod_annotation.dart' • rentwise_pro/lib/features/blocks/presentation/providers/blocks_controller.dart:1:8 • unnecessary_import
+  error • Invalid constant value • rentwise_pro/lib/features/blocks/presentation/screens/block_list_screen.dart:45:26 • invalid_constant
+   info • The import of 'package:flutter_riverpod/flutter_riverpod.dart' is unnecessary because all of the used elements are also provided by the import of 'package:riverpod_annotation/riverpod_annotation.dart' • rentwise_pro/lib/features/dashboard/presentation/providers/dashboard_controller.dart:1:8 • unnecessary_import
+   info • Unnecessary use of multiple underscores • rentwise_pro/lib/features/dashboard/presentation/screens/dashboard_screen.dart:147:41 • unnecessary_underscores
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/dashboard/presentation/screens/dashboard_screen.dart:227:20 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/dashboard/presentation/screens/dashboard_screen.dart:228:39 • deprecated_member_use
+warning • Unused import: 'package:uuid/uuid.dart' • rentwise_pro/lib/features/payments/presentation/screens/record_payment_screen.dart:4:8 • unused_import
+warning • Unused import: 'package:rentwise_pro/features/payments/domain/entities/payment.dart' • rentwise_pro/lib/features/payments/presentation/screens/record_payment_screen.dart:10:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/payments/presentation/screens/record_payment_screen.dart:53:37 • deprecated_member_use
+   info • 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre • rentwise_pro/lib/features/payments/presentation/screens/record_payment_screen.dart:83:17 • deprecated_member_use
+  error • Invalid constant value • rentwise_pro/lib/features/rent/presentation/screens/rent_collection_screen.dart:38:22 • invalid_constant
+  error • Invalid constant value • rentwise_pro/lib/features/rent/presentation/screens/rent_collection_screen.dart:112:45 • invalid_constant
+  error • The values in a const list literal must be constants • rentwise_pro/lib/features/rent/presentation/screens/rent_collection_screen.dart:112:45 • non_constant_list_element
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/rent/presentation/screens/rent_collection_screen.dart:162:60 • deprecated_member_use
+warning • Unused import: 'package:uuid/uuid.dart' • rentwise_pro/lib/features/tenants/presentation/screens/add_tenant_screen.dart:4:8 • unused_import
+warning • Unused import: '../../domain/entities/tenant.dart' • rentwise_pro/lib/features/tenants/presentation/screens/add_tenant_screen.dart:7:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/features/tenants/presentation/screens/tenant_detail_screen.dart:111:54 • deprecated_member_use
+   info • The import of 'package:flutter_riverpod/flutter_riverpod.dart' is unnecessary because all of the used elements are also provided by the import of 'package:riverpod_annotation/riverpod_annotation.dart' • rentwise_pro/lib/features/units/presentation/providers/units_controller.dart:1:8 • unnecessary_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/shared/widgets/app_card.dart:35:35 • deprecated_member_use
+warning • Unused import: 'package:rentwise_pro/core/theme/app_colors.dart' • rentwise_pro/lib/shared/widgets/app_text_field.dart:3:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/shared/widgets/status_badge.dart:23:51 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/shared/widgets/status_badge.dart:27:51 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • rentwise_pro/lib/shared/widgets/status_badge.dart:31:51 • deprecated_member_use
+warning • Unused import: 'package:freezed_annotation/freezed_annotation.dart' • rentwise_pro/test_freezed.dart:1:8 • unused_import
+  error • Target of URI doesn't exist: 'package:freezed_annotation/freezed_annotation.dart' • test_freezed_sealed.dart:1:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: 'file:///Users/nirajpaudel/Documents/codes/stitch_rentwise_pro/test_freezed_sealed.freezed.dart' • test_freezed_sealed.dart:2:6 • uri_does_not_exist
+  error • Undefined name 'freezed' used as an annotation • test_freezed_sealed.dart:3:1 • undefined_annotation
+  error • Classes can only mix in mixins and classes • test_freezed_sealed.dart:4:31 • mixin_of_non_class
+  error • The name '_TestFreezed' isn't a type and can't be used in a redirected constructor • test_freezed_sealed.dart:5:33 • redirect_to_non_class
+

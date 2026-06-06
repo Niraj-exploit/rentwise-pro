@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hamro Property - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#005236",
+                      "primary": "#004ac6",
+                      "surface-container-low": "#eff4ff",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "inverse-primary": "#b4c5ff",
+                      "surface-bright": "#f8f9ff",
+                      "surface-container-high": "#dce9ff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "background": "#f8f9ff",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-surface-variant": "#434655",
+                      "on-secondary-fixed": "#002113",
+                      "outline-variant": "#c3c6d7",
+                      "surface-variant": "#d3e4fe",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#6cf8bb",
+                      "outline": "#737686",
+                      "on-primary-container": "#eeefff",
+                      "tertiary-fixed": "#ffddb8",
+                      "on-primary-fixed": "#00174b",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-tint": "#0053db",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-tertiary-container": "#ffeedd",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "surface": "#f8f9ff",
+                      "on-error": "#ffffff",
+                      "on-surface": "#0b1c30",
+                      "inverse-surface": "#213145",
+                      "tertiary-container": "#996100",
+                      "on-background": "#0b1c30",
+                      "on-tertiary-fixed": "#2a1700",
+                      "secondary-fixed-dim": "#4edea3",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "primary-container": "#2563eb",
+                      "on-secondary-container": "#00714d",
+                      "surface-dim": "#cbdbf5",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#d3e4fe",
+                      "secondary": "#006c49",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#6ffbbe",
+                      "tertiary": "#784b00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "xs": "4px",
+                      "xl": "32px",
+                      "lg": "24px",
+                      "margin-desktop": "48px",
+                      "md": "16px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col justify-center font-body-md">
+<main class="w-full max-w-md mx-auto p-margin-mobile md:p-margin-desktop flex flex-col h-full md:justify-center">
+<div class="mb-lg flex justify-center">
+<div class="w-32 h-32 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden shadow-[0px_8px_20px_rgba(0,0,0,0.08)]">
+<img alt="Modern apartment building" class="w-full h-full object-cover" data-alt="A clean, modern architectural rendering or photograph of a sleek apartment building in a sunny, clear sky setting. The building features contemporary glass facades and minimal lines, reflecting a professional and authoritative real estate brand. The lighting is bright and high-key, emphasizing a pristine, secure, and modern fintech-inspired aesthetic suited for a property management application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMuymKlNTjMfStvtshP7L0TzdlBwbgT-2dqp7jhC10WXR1PAorR_SEgudNOvimDYtIuTm_Oc25kzb2KP_0wvYLY8ts_wzD2knzdF2cwq9kL4RWF8KDzFjsLLZxdP5gJ4DpB7qql8IVDy_QKGFJHSmd6PhKTZC6eeEEY5AbF1nfGp3vQ-AtHIj9k0jI7GiZgy0R1vJhHlU06yzwuOnasTZbCz9leA9UwOE5iOGgT1prc_ttLCjSvhJD6N-u5IbWuSMWm79de5GOuuY"/>
+</div>
+</div>
+<div class="text-center mb-xl">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-sm">Hamro Property</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your properties with ease</p>
+</div>
+<form class="bg-surface p-lg rounded-xl border border-outline-variant shadow-[0px_4px_12px_rgba(0,0,0,0.05)] flex flex-col gap-md relative z-10">
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="identifier">Mobile Number or Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" style="font-variation-settings: 'FILL' 0;">person</span>
+<input class="w-full h-12 pl-10 pr-4 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md text-body-md focus:border-primary focus:ring-3 focus:ring-primary/20 transition-all outline-none" id="identifier" name="identifier" placeholder="Enter your details" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs" id="password-field">
+<label class="font-label-md text-label-md text-on-surface" for="password">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" style="font-variation-settings: 'FILL' 0;">lock</span>
+<input class="w-full h-12 pl-10 pr-10 rounded-lg border border-outline-variant bg-surface text-on-surface font-body-md text-body-md focus:border-primary focus:ring-3 focus:ring-primary/20 transition-all outline-none" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">visibility_off</span>
+</button>
+</div>
+<div class="flex justify-end mt-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Forgot password?</a>
+</div>
+</div>
+<button class="w-full h-12 mt-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 bg-gradient-to-b from-white/10 to-transparent hover:shadow-[0px_8px_20px_rgba(37,99,235,0.2)] transition-all active:scale-[0.98]" type="submit">
+<span>Login</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+<div class="relative flex items-center justify-center py-sm">
+<div class="absolute border-t border-outline-variant w-full"></div>
+<span class="bg-surface px-3 font-label-sm text-label-sm text-on-surface-variant relative z-10">OR</span>
+</div>
+<button class="w-full h-12 rounded-lg border border-outline-variant bg-surface text-primary font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors" id="toggle-login-mode" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">dialpad</span>
+<span>Login with OTP</span>
+</button>
+</form>
+<div class="mt-lg text-center">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Don't have an account? 
+                <a class="font-label-md text-label-md text-primary hover:underline ml-1" href="#">Sign up</a>
+</p>
+</div>
+</main>
+<script>
+        document.getElementById('toggle-login-mode').addEventListener('click', function() {
+            const pwdField = document.getElementById('password-field');
+            const btnText = this.querySelector('span:nth-child(2)');
+            const btnIcon = this.querySelector('.material-symbols-outlined');
+            
+            if (pwdField.style.display === 'none') {
+                pwdField.style.display = 'flex';
+                btnText.textContent = 'Login with OTP';
+                btnIcon.textContent = 'dialpad';
+            } else {
+                pwdField.style.display = 'none';
+                btnText.textContent = 'Login with Password';
+                btnIcon.textContent = 'lock';
+            }
+        });
+    </script>
+</body></html>

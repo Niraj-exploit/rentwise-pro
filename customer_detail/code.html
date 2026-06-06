@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Detail (Tenant Profile)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#005236",
+                      "secondary-fixed": "#6ffbbe",
+                      "secondary-fixed-dim": "#4edea3",
+                      "outline": "#737686",
+                      "inverse-surface": "#213145",
+                      "on-primary-fixed": "#00174b",
+                      "surface": "#f8f9ff",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#996100",
+                      "on-background": "#0b1c30",
+                      "outline-variant": "#c3c6d7",
+                      "surface-container-low": "#eff4ff",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-container-highest": "#d3e4fe",
+                      "surface-container": "#e5eeff",
+                      "on-secondary-container": "#00714d",
+                      "secondary": "#006c49",
+                      "surface-container-high": "#dce9ff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "primary": "#004ac6",
+                      "on-surface-variant": "#434655",
+                      "inverse-on-surface": "#eaf1ff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#002113",
+                      "tertiary": "#784b00",
+                      "on-surface": "#0b1c30",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#cbdbf5",
+                      "error": "#ba1a1a",
+                      "on-tertiary": "#ffffff",
+                      "surface-variant": "#d3e4fe",
+                      "on-tertiary-fixed": "#2a1700",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#6cf8bb",
+                      "surface-tint": "#0053db",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#eeefff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#ffeedd",
+                      "background": "#f8f9ff",
+                      "surface-bright": "#f8f9ff",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "inverse-primary": "#b4c5ff",
+                      "tertiary-fixed": "#ffddb8",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "primary-container": "#2563eb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "xl": "32px",
+                      "sm": "8px",
+                      "xs": "4px",
+                      "gutter": "16px",
+                      "margin-mobile": "16px",
+                      "md": "16px",
+                      "margin-desktop": "48px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "headline-sm": ["Inter"],
+                      "headline-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[style*="FILL' 1"] {
+          font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile h-14">
+<div class="flex items-center gap-4">
+<button aria-label="Go back" class="text-on-surface-variant hover:bg-surface-container active:scale-95 transition-transform duration-150 rounded-full p-1">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-inverse-primary">Hamro Property</h1>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Notifications" class="text-on-surface-variant hover:bg-surface-container active:scale-95 transition-transform duration-150 rounded-full p-2">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div aria-label="Landlord Profile" class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-sm">
+                LP
+            </div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-[72px] px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-md md:gap-lg">
+<!-- Profile Header Column (Takes full width on mobile, 4 cols on desktop) -->
+<div class="md:col-span-4 space-y-md">
+<!-- Tenant Profile Card -->
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex flex-col items-center text-center">
+<img alt="Sita Tamang" class="w-24 h-24 rounded-full mb-4 border-2 border-primary-container" data-alt="A professional headshot of a young South Asian woman, likely Nepali, with a warm and approachable expression. She has dark hair tied back neatly and is wearing smart-casual attire. The lighting is soft and natural, emphasizing a trustworthy and responsible demeanor. The background is a blurred, bright office or modern living space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF9X_7XZrrt_4X1TqJx98VpyMs5pINu8Y-_zHg7aBDhzud48gW6nLhwgzPrKfOu8_rJXvzRQyshSS5rtTuJ79KNcYSZHrJnVI3_mpcAIz5cUUcyB56u49a_Ph40HHJVg2dg488tzlU9nsSm5BB_BDFjuLNxub8OKcrS99zje4B-kLGc34Ngtk4WFf8ZB1AQkAILvsugwMGCGbxvRlVrvGs68B9sbvK86Z4u4r5q68LMhm37TMohoy4aeIDbNEJIMEuW84gAEjH_Wg"/>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-1">Sita Tamang</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Tenant since Oct 2023</p>
+<div class="w-full space-y-3 mb-6 text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">call</span>
+<span class="font-body-md text-body-md text-on-surface">+977 9841234567</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">mail</span>
+<span class="font-body-md text-body-md text-on-surface">sita.tamang@example.com</span>
+</div>
+</div>
+<div class="w-full flex gap-3">
+<button class="flex-1 bg-primary text-on-primary font-label-md text-label-md h-12 rounded-lg flex items-center justify-center gap-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm bg-gradient-to-b from-white/10 to-transparent">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Message
+                    </button>
+<button class="flex-1 border border-outline text-on-surface font-label-md text-label-md h-12 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">edit</span>
+                        Edit
+                    </button>
+</div>
+</div>
+<!-- KYC Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">KYC Status</h3>
+<div class="bg-secondary/10 text-secondary font-label-sm text-label-sm px-2 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                        Verified
+                    </div>
+</div>
+<div class="space-y-3">
+<a class="flex items-center justify-between p-3 rounded-lg border border-outline-variant hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">badge</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Citizenship Document</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">open_in_new</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-lg border border-outline-variant hover:bg-surface-container transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">description</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Lease Agreement</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Details Column (Takes full width on mobile, 8 cols on desktop) -->
+<div class="md:col-span-8 space-y-md">
+<!-- Active Lease Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant shadow-[0_4px_12px_rgba(0,0,0,0.05)] col-span-1 sm:col-span-2">
+<div class="flex items-start justify-between mb-2">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Current Room</p>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mt-1">Block B, 204</h3>
+</div>
+<div class="bg-primary/10 text-primary font-label-sm text-label-sm px-2 py-1 rounded-md">
+                            Active Lease
+                        </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lease ends: Sept 30, 2024</p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Monthly Rent</p>
+<div class="flex items-baseline gap-1">
+<span class="font-body-md text-body-md text-on-surface-variant">NPR</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">15,000</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Security Deposit</p>
+<div class="flex items-baseline gap-1">
+<span class="font-body-md text-body-md text-on-surface-variant">NPR</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">30,000</span>
+</div>
+</div>
+</div>
+<!-- Payment History List -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-[0_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+<div class="p-lg border-b border-outline-variant flex justify-between items-center bg-surface/50 backdrop-blur-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Payments</h3>
+<button class="text-primary font-label-sm text-label-sm hover:underline">View All</button>
+</div>
+<div class="divide-y divide-outline-variant">
+<!-- Row 1 (Paid) -->
+<div class="p-md flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Rent - March 2024</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mar 05, 2024</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-1">
+<span class="font-body-md text-body-md text-on-surface font-semibold">NPR 15,000</span>
+<span class="bg-secondary/10 text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded-sm">Paid</span>
+</div>
+</div>
+<!-- Row 2 (Paid) -->
+<div class="p-md flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Rent - February 2024</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Feb 02, 2024</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-1">
+<span class="font-body-md text-body-md text-on-surface font-semibold">NPR 15,000</span>
+<span class="bg-secondary/10 text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded-sm">Paid</span>
+</div>
+</div>
+<!-- Row 3 (Pending) -->
+<div class="p-md flex items-center justify-between hover:bg-surface-container-low transition-colors group bg-error/5 border-l-4 border-error">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Electricity Bill - March</p>
+<p class="font-body-sm text-body-sm text-error">Due: Mar 10, 2024</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-1">
+<span class="font-body-md text-body-md text-on-surface font-semibold">NPR 1,250</span>
+<span class="bg-error/10 text-error font-label-sm text-label-sm px-2 py-0.5 rounded-sm">Overdue</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden as this is a details screen, but left structure if needed per instructions, though specifically instructed to suppress FAB on Details screens. Suppressing.) -->
+<!-- Suppressed FAB -->
+<!-- BottomNavBar (Suppressed as this is a sub-page with a back action, not a top-level destination) -->
+<!-- Suppressed Nav Shell -->
+</body></html>

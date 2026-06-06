@@ -1,0 +1,37 @@
+Analyzing rentwise_pro...                                       
+
+warning • Unused import: '../models/billing_constants.dart' • lib/core/services/billing_service.dart:1:8 • unused_import
+warning • The value of the local variable 'boolType' isn't used • lib/core/storage/database_service.dart:30:11 • unused_local_variable
+   info • 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre • lib/core/theme/app_theme.dart:18:9 • deprecated_member_use
+   info • 'onBackground' is deprecated and shouldn't be used. Use onSurface instead. This feature was deprecated after v3.18.0-0.1.pre • lib/core/theme/app_theme.dart:19:9 • deprecated_member_use
+   info • 'surfaceVariant' is deprecated and shouldn't be used. Use surfaceContainerHighest instead. This feature was deprecated after v3.18.0-0.1.pre • lib/core/theme/app_theme.dart:22:9 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/app_theme.dart:72:88 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/analytics/presentation/widgets/collection_chart.dart:51:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/login_screen.dart:69:44 • deprecated_member_use
+warning • Unused import: 'package:go_router/go_router.dart' • lib/features/bills/presentation/screens/billing_invoices_screen.dart:3:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/bills/presentation/screens/billing_invoices_screen.dart:49:46 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/bills/presentation/screens/billing_invoices_screen.dart:71:48 • deprecated_member_use
+warning • Unused import: 'package:uuid/uuid.dart' • lib/features/bills/presentation/screens/generate_bill_screen.dart:4:8 • unused_import
+warning • Unused import: '../../domain/entities/bill.dart' • lib/features/bills/presentation/screens/generate_bill_screen.dart:10:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/bills/presentation/screens/generate_bill_screen.dart:98:36 • deprecated_member_use
+   info • The import of 'package:flutter_riverpod/flutter_riverpod.dart' is unnecessary because all of the used elements are also provided by the import of 'package:riverpod_annotation/riverpod_annotation.dart' • lib/features/blocks/presentation/providers/blocks_controller.dart:1:8 • unnecessary_import
+   info • The import of 'package:flutter_riverpod/flutter_riverpod.dart' is unnecessary because all of the used elements are also provided by the import of 'package:riverpod_annotation/riverpod_annotation.dart' • lib/features/dashboard/presentation/providers/dashboard_controller.dart:1:8 • unnecessary_import
+   info • Unnecessary use of multiple underscores • lib/features/dashboard/presentation/screens/dashboard_screen.dart:147:41 • unnecessary_underscores
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/screens/dashboard_screen.dart:227:20 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dashboard/presentation/screens/dashboard_screen.dart:228:39 • deprecated_member_use
+warning • Unused import: 'package:uuid/uuid.dart' • lib/features/payments/presentation/screens/record_payment_screen.dart:4:8 • unused_import
+warning • Unused import: 'package:rentwise_pro/features/payments/domain/entities/payment.dart' • lib/features/payments/presentation/screens/record_payment_screen.dart:10:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/payments/presentation/screens/record_payment_screen.dart:53:37 • deprecated_member_use
+   info • 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre • lib/features/payments/presentation/screens/record_payment_screen.dart:83:17 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/rent/presentation/screens/rent_collection_screen.dart:162:60 • deprecated_member_use
+warning • Unused import: 'package:uuid/uuid.dart' • lib/features/tenants/presentation/screens/add_tenant_screen.dart:4:8 • unused_import
+warning • Unused import: '../../domain/entities/tenant.dart' • lib/features/tenants/presentation/screens/add_tenant_screen.dart:7:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/tenants/presentation/screens/tenant_detail_screen.dart:111:54 • deprecated_member_use
+   info • The import of 'package:flutter_riverpod/flutter_riverpod.dart' is unnecessary because all of the used elements are also provided by the import of 'package:riverpod_annotation/riverpod_annotation.dart' • lib/features/units/presentation/providers/units_controller.dart:1:8 • unnecessary_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/app_card.dart:35:35 • deprecated_member_use
+warning • Unused import: 'package:rentwise_pro/core/theme/app_colors.dart' • lib/shared/widgets/app_text_field.dart:3:8 • unused_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/status_badge.dart:23:51 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/status_badge.dart:27:51 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/status_badge.dart:31:51 • deprecated_member_use
+warning • Unused import: 'package:freezed_annotation/freezed_annotation.dart' • test_freezed.dart:1:8 • unused_import
+
