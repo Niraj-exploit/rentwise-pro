@@ -49,7 +49,7 @@ final class BlockRepositoryProvider
   }
 }
 
-String _$blockRepositoryHash() => r'cc53c8cb1a8af2c4730e9b1ff5fec809f980d476';
+String _$blockRepositoryHash() => r'129bce3ca00903b22c37661ffa4abd410e453a95';
 
 @ProviderFor(BlocksController)
 final blocksControllerProvider = BlocksControllerProvider._();
@@ -75,7 +75,7 @@ final class BlocksControllerProvider
   BlocksController create() => BlocksController();
 }
 
-String _$blocksControllerHash() => r'74e66ab9773b99d1565401fefd93fed96f2b3027';
+String _$blocksControllerHash() => r'5f869b7d78fd230a4a7c926a21a0ad67db179900';
 
 abstract class _$BlocksController extends $AsyncNotifier<List<Block>> {
   FutureOr<List<Block>> build();

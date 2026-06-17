@@ -14,6 +14,11 @@ abstract class Tenant with _$Tenant {
     required DateTime joinedDate,
     required TenantStatus status,
     @Default(0.0) double balance,
+
+    // Gist-required KYC fields
+    String? fatherName,
+    String? grandfatherName,
+    @Default('unverified') String kycStatus,
   }) = _Tenant;
 
   factory Tenant.fromJson(Map<String, dynamic> json) => _$TenantFromJson(json);

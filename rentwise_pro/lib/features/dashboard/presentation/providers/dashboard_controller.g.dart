@@ -55,7 +55,7 @@ final class DashboardRepositoryProvider
 }
 
 String _$dashboardRepositoryHash() =>
-    r'e5c9c75dd4a85ab1e4de9216425ecb05cc781d39';
+    r'01cd7672e50556b587406862d9dd7bd6e3a01208';
 
 @ProviderFor(DashboardController)
 final dashboardControllerProvider = DashboardControllerProvider._();

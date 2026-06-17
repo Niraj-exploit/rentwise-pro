@@ -15,6 +15,9 @@ _Tenant _$TenantFromJson(Map<String, dynamic> json) => _Tenant(
   joinedDate: DateTime.parse(json['joinedDate'] as String),
   status: $enumDecode(_$TenantStatusEnumMap, json['status']),
   balance: (json['balance'] as num?)?.toDouble() ?? 0.0,
+  fatherName: json['fatherName'] as String?,
+  grandfatherName: json['grandfatherName'] as String?,
+  kycStatus: json['kycStatus'] as String? ?? 'unverified',
 );
 
 Map<String, dynamic> _$TenantToJson(_Tenant instance) => <String, dynamic>{
@@ -26,6 +29,9 @@ Map<String, dynamic> _$TenantToJson(_Tenant instance) => <String, dynamic>{
   'joinedDate': instance.joinedDate.toIso8601String(),
   'status': _$TenantStatusEnumMap[instance.status]!,
   'balance': instance.balance,
+  'fatherName': instance.fatherName,
+  'grandfatherName': instance.grandfatherName,
+  'kycStatus': instance.kycStatus,
 };
 
 const _$TenantStatusEnumMap = {

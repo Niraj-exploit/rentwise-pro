@@ -48,7 +48,7 @@ final class UnitRepositoryProvider
   }
 }
 
-String _$unitRepositoryHash() => r'8b71c4e772d5e65477afad81b9e75ab54e89be24';
+String _$unitRepositoryHash() => r'0eab8e9d7743f6df0c6cf2a014a217849db49386';
 
 @ProviderFor(UnitsController)
 final unitsControllerProvider = UnitsControllerFamily._();
@@ -91,7 +91,7 @@ final class UnitsControllerProvider
   }
 }
 
-String _$unitsControllerHash() => r'fc18834a8eabfc312114835aa16d3f2ac42bf1ea';
+String _$unitsControllerHash() => r'1bcbdb44a8389706acec1429a2a873c320e116d0';
 
 final class UnitsControllerFamily extends $Family
     with

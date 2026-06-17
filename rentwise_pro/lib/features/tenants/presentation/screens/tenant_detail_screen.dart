@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rentwise_pro/core/theme/app_text_styles.dart';
 import 'package:rentwise_pro/core/theme/app_colors.dart';
 import 'package:rentwise_pro/shared/widgets/app_card.dart';
+import '../../domain/entities/tenant.dart';
 
 class TenantDetailPage extends ConsumerWidget {
   final String tenantId;
@@ -11,6 +12,27 @@ class TenantDetailPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // NOTE: This screen still uses placeholder tenant info for now.
+    // Batch 1 only updated AddTenantScreen persistence + entity.
+    // Full wiring to load Tenant by tenantId will be implemented next pass
+    // when TenantRepository/provider is available.
+    final tenant = Tenant(
+      id: 'placeholder',
+      name: 'Sita Tamang',
+      phone: '+977 9841234567',
+      email: 'sita.tamang@example.com',
+      unitId: 'placeholder',
+      joinedDate: DateTime(2023, 10, 1),
+      status: TenantStatus.active,
+      balance: 0.0,
+      fatherName: 'Ram Bahadur',
+      grandfatherName: 'Hari Bahadur',
+      kycStatus: 'verified',
+    );
+
+    final kycText = tenant.kycStatus;
+    final isVerified = kycText.toLowerCase() == 'verified';
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -60,19 +82,18 @@ class TenantDetailPage extends ConsumerWidget {
                     backgroundColor: AppColors.primaryContainer,
                   ),
                   const SizedBox(height: 16),
-                  Text('Sita Tamang', style: AppTextStyles.headlineMedium),
+                  Text(tenant.name, style: AppTextStyles.headlineMedium),
                   Text(
-                    'Tenant since Oct 2023',
+                    'Tenant since ${tenant.joinedDate.year}',
                     style: AppTextStyles.bodyMedium,
                   ),
                   const SizedBox(height: 24),
-
                   Row(
                     children: [
                       const Icon(Icons.call, color: AppColors.outline),
                       const SizedBox(width: 12),
                       Text(
-                        '+977 9841234567',
+                        tenant.phone,
                         style: AppTextStyles.bodyMedium.copyWith(
                           color: AppColors.onSurface,
                         ),
@@ -85,7 +106,7 @@ class TenantDetailPage extends ConsumerWidget {
                       const Icon(Icons.mail, color: AppColors.outline),
                       const SizedBox(width: 12),
                       Text(
-                        'sita.tamang@example.com',
+                        tenant.email ?? '-',
                         style: AppTextStyles.bodyMedium.copyWith(
                           color: AppColors.onSurface,
                         ),
@@ -103,7 +124,8 @@ class TenantDetailPage extends ConsumerWidget {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.primary,
                             foregroundColor: AppColors.onPrimary,
-                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            padding:
+                                const EdgeInsets.symmetric(vertical: 12),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
@@ -119,7 +141,8 @@ class TenantDetailPage extends ConsumerWidget {
                           style: OutlinedButton.styleFrom(
                             foregroundColor: AppColors.onSurface,
                             side: const BorderSide(color: AppColors.outline),
-                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            padding:
+                                const EdgeInsets.symmetric(vertical: 12),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
@@ -139,29 +162,36 @@ class TenantDetailPage extends ConsumerWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('KYC Status', style: AppTextStyles.headlineSmall),
+                      Text('KYC Status',
+                          style: AppTextStyles.headlineSmall),
                       Container(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 8,
                           vertical: 4,
                         ),
                         decoration: BoxDecoration(
-                          color: AppColors.secondary.withOpacity(0.1),
+                          color: isVerified
+                              ? AppColors.secondary.withOpacity(0.1)
+                              : Colors.orange.withOpacity(0.15),
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(
-                              Icons.check_circle,
+                              isVerified ? Icons.check_circle : Icons.hourglass_empty,
                               size: 16,
-                              color: AppColors.secondary,
+                              color: isVerified
+                                  ? AppColors.secondary
+                                  : Colors.orange,
                             ),
                             const SizedBox(width: 4),
                             Text(
-                              'Verified',
+                              isVerified ? 'Verified' : 'Unverified',
                               style: TextStyle(
-                                color: AppColors.secondary,
+                                color: isVerified
+                                    ? AppColors.secondary
+                                    : Colors.orange,
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -172,54 +202,61 @@ class TenantDetailPage extends ConsumerWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: AppColors.outlineVariant),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: ListTile(
-                      leading: const Icon(
-                        Icons.badge_outlined,
-                        color: AppColors.outline,
-                      ),
-                      title: Text(
-                        'Citizenship Document',
-                        style: AppTextStyles.bodyMedium,
-                      ),
-                      trailing: const Icon(
-                        Icons.open_in_new,
-                        color: AppColors.outlineVariant,
-                      ),
-                      onTap: () {},
-                    ),
+                  _InfoRow(
+                    icon: Icons.person_outline,
+                    label: 'Father / Guardian',
+                    value: tenant.fatherName ?? '-',
                   ),
                   const SizedBox(height: 12),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: AppColors.outlineVariant),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: ListTile(
-                      leading: const Icon(
-                        Icons.description_outlined,
-                        color: AppColors.outline,
-                      ),
-                      title: Text(
-                        'Lease Agreement',
-                        style: AppTextStyles.bodyMedium,
-                      ),
-                      trailing: const Icon(
-                        Icons.open_in_new,
-                        color: AppColors.outlineVariant,
-                      ),
-                      onTap: () {},
-                    ),
+                  _InfoRow(
+                    icon: Icons.person_outline_outlined,
+                    label: 'Grandfather',
+                    value: tenant.grandfatherName ?? '-',
                   ),
                 ],
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _InfoRow extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final String value;
+
+  const _InfoRow({
+    required this.icon,
+    required this.label,
+    required this.value,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        border: Border.all(color: AppColors.outlineVariant),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, color: AppColors.outline),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(label, style: AppTextStyles.bodySmall),
+                const SizedBox(height: 4),
+                Text(value, style: AppTextStyles.bodyMedium),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
